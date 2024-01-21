@@ -24,8 +24,9 @@ let jouer i j p g= if (EC.mem (i,j) g.cases_vides)
     Array.iter (fun x->Array.iter (fun y-> print_string(y)) x; print_string("\n")) gr;print_string("\n")
 
 let eval_naif_gr g=let gr=g.grille in Score.eval_naif gr
-let eval_narquois_gr g=let gr=g.grille in Score.eval_narquois gr
+let eval_acc_gr g=let gr=g.grille in Score.eval_acc gr
 
+let eval_acc2_gr g =let gr=g.grille in Score.eval_acc2 gr
 let generer_grille n m nb_jo t=
 let g=creer_grille n m in
 let nb_coups=int_of_float (float_of_int(n*m)*.t) in
@@ -44,4 +45,5 @@ let test_victoire_gr g p=let gr=g.grille in Score.test_victoire gr p; if (est_pl
 
 let eval_str g=let gr=g.grille in Score.eval_str gr
 
-
+let eval_str2 g=let gr=g.grille in Score.eval_str2 gr
+let eval_str3 g=let gr=g.grille in Score.eval_str3 gr
